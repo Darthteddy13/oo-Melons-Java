@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Classes: Melon Practice | Devmountain Foundations</title>
+
+      <link
+        href="_static/pygments.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link href="_static/devmountain.css" rel="stylesheet" type="text/css" />
+          <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+          <link rel="stylesheet" type="text/css" href="_static/devmountain.css" />
+          <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+          <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+
+      <script src="_static/pdfobject.min.js"></script>
+      
+  </head>
+  <body>
+      <div id="handouts-container">
+        <header id="page-header">
+            <p id="project-title">Devmountain Foundations</p>
+            <p id="page-title">Classes: Melon Practice</p>
+              <p id="backlink">
+                <a href="/"> &laquo; Back to Homepage </a>
+              </p>
+        </header>
+
+        <nav id="page-toc"><ul>
+<li><a class="reference internal" href="#">Classes: Melon Practice</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+<li><a class="reference internal" href="#the-melon-farm">The Melon Farm</a></li>
+<li><a class="reference internal" href="#part-1-preparing-for-the-harvest">Part 1: Preparing for the Harvest</a><ul>
+<li><a class="reference internal" href="#review-classes">Review Classes</a></li>
+<li><a class="reference internal" href="#making-melon-types">Making Melon Types</a></li>
+<li><a class="reference internal" href="#make-melon-types-array">Make Melon Types Array</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part-2-the-harvest-is-here">Part 2: The Harvest is Here</a><ul>
+<li><a class="reference internal" href="#make-melon-instances">Make Melon Instances</a></li>
+<li><a class="reference internal" href="#melon-behaviors">Melon Behaviors</a></li>
+<li><a class="reference internal" href="#sellability-report">Sellability Report</a></li>
+<li><a class="reference internal" href="#test-your-method">Test Your Method</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+        <main id="page-content">
+            <section class="section" id="classes-melon-practice">
+<h1>Classes: Melon Practice</h1>
+<section class="section" id="setup">
+<h2>Setup</h2>
+<p>Download the materials for this exercise <a class="reference external" href="https://ed.devmountain.com/materials/exercises/oo-practice-melons-java.zip">here</a>.</p>
+</section>
+<section class="section" id="the-melon-farm">
+<h2>The Melon Farm</h2>
+<p>In this exercise, we’ll take a real world set of objects, data, and behaviors
+and create several classes that could encapsulate these objects in a Java
+program. We’ll also create one relationship between two classes.</p>
+<p>The scenario:</p>
+<p>At a nearby melon farm, a large melon harvest is imminent. The farm grows
+several types of melons. The farm expects to harvest many melons each day.</p>
+<p>In this object-based system, we’ll have two objects:</p>
+<ul class="simple">
+<li><p><cite>MelonType</cite></p></li>
+<li><p><cite>Melon</cite></p></li>
+</ul>
+</section>
+<section class="section" id="part-1-preparing-for-the-harvest">
+<h2>Part 1: Preparing for the Harvest</h2>
+<p>Here is the current data for melon types at the melon farm:</p>
+<p>Name: Muskmelon</p>
+<ul class="simple">
+<li><p>Reporting code: musk</p></li>
+<li><p>First harvest in 1998</p></li>
+<li><p>Color: green</p></li>
+<li><p>Seedless</p></li>
+<li><p>Bestseller</p></li>
+</ul>
+<p>Name: Casaba</p>
+<ul class="simple">
+<li><p>Reporting code: cas</p></li>
+<li><p>First harvest in 2003</p></li>
+<li><p>Color: orange</p></li>
+<li><p>Has seeds</p></li>
+</ul>
+<p>Name: Crenshaw</p>
+<ul class="simple">
+<li><p>Reporting code: cren</p></li>
+<li><p>First harvest in 1996</p></li>
+<li><p>Color: green</p></li>
+<li><p>Has seeds</p></li>
+</ul>
+<p>Name: Yellow Watermelon</p>
+<ul class="simple">
+<li><p>Reporting code: yw</p></li>
+<li><p>First harvest in 2013</p></li>
+<li><p>Color: yellow</p></li>
+<li><p>Has seeds</p></li>
+<li><p>Bestseller</p></li>
+</ul>
+<section class="section" id="review-classes">
+<h3>Review Classes</h3>
+<p>Open the files <cite>Melon.java</cite>, <cite>MelonType.java</cite>, and <cite>Main.java</cite> in your editor.
+Read each file carefully.</p>
+</section>
+<section class="section" id="making-melon-types">
+<h3>Making Melon Types</h3>
+<p>In the file <cite>Main.java</cite>, inside the <cite>main</cite> method, instantiate the class
+<cite>MelonType</cite> for each of the above melon types.</p>
+<div class="admonition hint">
+<p class="admonition-title">How to instantiate a <cite>MelonType</cite> to represent muskmelons</p>
+<details class="admonition-body"><summary></summary><div class="admonition-body docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">MelonType</span> <span class="n">musk</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MelonType</span><span class="p">(</span>
+    <span class="s">&quot;musk&quot;</span><span class="p">,</span>
+    <span class="s">&quot;Muskmelon&quot;</span><span class="p">,</span>
+    <span class="mi">1998</span><span class="p">,</span>
+    <span class="s">&quot;green&quot;</span><span class="p">,</span>
+    <span class="kc">true</span><span class="p">,</span>
+    <span class="kc">true</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section class="section" id="make-melon-types-array">
+<h3>Make Melon Types Array</h3>
+<p>Continuing in the <cite>Main</cite> class’s <cite>main</cite> method, initialize an array that will be able to
+hold all of the melon type instances you just created. Then, add the melon types to your
+array.</p>
+<div class="admonition hint">
+<p class="admonition-title">Making Arrays</p>
+<details class="admonition-body"><summary></summary><div class="admonition-body docutils container">
+<p>There are two ways to create an array in Java.</p>
+<ol class="arabic simple">
+<li><p>Initialize an array with a size, and then assign each item into the array using
+the index.</p></li>
+<li><p>Use the array “shorthand”, which allows you to define the array and it’s elements
+all on one line.</p></li>
+</ol>
+<p>Either way, you’ll need to ensure to initialize the datatype of your array like so:
+<code class="docutils literal notranslate"><span class="pre">MelonType[]</span> <span class="pre">melonTypes</span> <span class="pre">=</span> <span class="pre">YOU_FILL_IN_THE_REST</span></code>.</p>
+</div>
+</details></div>
+</section>
+</section>
+<section class="section" id="part-2-the-harvest-is-here">
+<h2>Part 2: The Harvest is Here</h2>
+<p>Now that the harvest is upon us, we’ll need to keep track of each melon that
+is harvested. For the first day of the harvest, here is the data that needs to
+be recorded.</p>
+<p>Melon 1</p>
+<ul class="simple">
+<li><p>Melon type: yw</p></li>
+<li><p>Shape rating: 8</p></li>
+<li><p>Color rating: 7</p></li>
+<li><p>Harvested from Field 2</p></li>
+<li><p>Harvested by Sheila</p></li>
+</ul>
+<p>Melon 2</p>
+<ul class="simple">
+<li><p>Melon type: yw</p></li>
+<li><p>Shape rating: 3</p></li>
+<li><p>Color rating: 4</p></li>
+<li><p>Harvested from Field 2</p></li>
+<li><p>Harvested by Sheila</p></li>
+</ul>
+<p>Melon 3</p>
+<ul class="simple">
+<li><p>Melon type: cas</p></li>
+<li><p>Shape rating: 10</p></li>
+<li><p>Color rating: 6</p></li>
+<li><p>Harvested from Field 35</p></li>
+<li><p>Harvested by Sheila</p></li>
+</ul>
+<p>Melon 4</p>
+<ul class="simple">
+<li><p>Melon type: cren</p></li>
+<li><p>Shape rating: 8</p></li>
+<li><p>Color rating: 9</p></li>
+<li><p>Harvested from Field 35</p></li>
+<li><p>Harvested by Michael</p></li>
+</ul>
+<p>Melon 5</p>
+<ul class="simple">
+<li><p>Melon type: cren</p></li>
+<li><p>Shape rating: 8</p></li>
+<li><p>Color rating: 2</p></li>
+<li><p>Harvested from Field 35</p></li>
+<li><p>Harvested by Michael</p></li>
+</ul>
+<p>Melon 6</p>
+<ul class="simple">
+<li><p>Melon type: musk</p></li>
+<li><p>Shape rating: 6</p></li>
+<li><p>Color rating: 7</p></li>
+<li><p>Harvested from Field 4</p></li>
+<li><p>Harvested by Michael</p></li>
+</ul>
+<p>Melon 7</p>
+<ul class="simple">
+<li><p>Melon type: yw</p></li>
+<li><p>Shape rating: 7</p></li>
+<li><p>Color rating: 10</p></li>
+<li><p>Harvested from Field 3</p></li>
+<li><p>Harvested by Sheila</p></li>
+</ul>
+<section class="section" id="make-melon-instances">
+<h3>Make Melon Instances</h3>
+<p>Again, in the <cite>Main</cite> class and <cite>main</cite> method, instantiate the class
+<cite>Melon</cite> for each of the above melons. Similar to what you did with melon
+types. Make an array of melon objects as well.</p>
+<div class="admonition note">
+<p class="admonition-title">The <cite>melonType</cite> field</p>
+<div class="admonition-body docutils container">
+<p>Hopefully, you’ve correctly predicted that your <cite>Melon</cite> instances will each
+need a <cite>melonType</cite> field. Create a relationship here!</p>
+<p>The <cite>melonType</cite> field should be the actual instance of the <cite>MelonType</cite>
+class from Part 1.</p>
+<p>When you instantiate a melon for Melon 1 (data copied below), it will look
+something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Melon</span> <span class="mi">1</span>
+
+<span class="o">-</span> <span class="n">Melon</span> <span class="nb">type</span><span class="p">:</span> <span class="n">yw</span>
+
+<span class="o">-</span> <span class="n">Shape</span> <span class="n">rating</span><span class="p">:</span> <span class="mi">8</span>
+
+<span class="o">-</span> <span class="n">Color</span> <span class="n">rating</span><span class="p">:</span> <span class="mi">7</span>
+
+<span class="o">-</span> <span class="n">Harvested</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">2</span>
+
+<span class="o">-</span> <span class="n">Harvested</span> <span class="n">by</span> <span class="n">Sheila</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Melon melon1 = new Melon(melonTypes[3], 8, 7, 2, &#39;Sheila&#39;);
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="melon-behaviors">
+<h3>Melon Behaviors</h3>
+<p>All melons can be categorized as sellable or not sellable.
+A melon is able to be sold if
+both its shape and color ratings are greater than 5, and it didn’t come from
+field 3, which was found to have poisonous fertilizer planted by a competing
+melon farm.</p>
+<p>Create a method on the <cite>Melon</cite> class called <cite>isSellable</cite> that handles this logic.
+Some notes on this method:</p>
+<ul class="simple">
+<li><p>This will <strong>not</strong> be a <cite>static</cite> method, since it will deal with the instance
+of a particular melon.</p></li>
+<li><p>You can refer to the instance of a melon within a method on the <cite>Melon</cite> class
+by using the keyword <cite>this</cite>.</p></li>
+<li><p>Recall that for all java methods, you must specify the return type.
+Would would be a good return type for this method? A boolean!</p></li>
+</ul>
+<p>If you need help on how to get started, check out the hint below.</p>
+<div class="admonition hint">
+<p class="admonition-title"><cite>isSellable</cite> method</p>
+<details class="admonition-body"><summary></summary><div class="admonition-body docutils container">
+<p>In <cite>Melon.java</cite>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Melon</span> <span class="p">{</span>
+
+  <span class="c1">// ... rest of class</span>
+
+<span class="hll">  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isSellable</span><span class="p">(){</span>
+</span><span class="hll">    <span class="c1">// write the body of the method here!</span>
+</span><span class="hll">  <span class="p">}</span>
+</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section class="section" id="sellability-report">
+<h3>Sellability Report</h3>
+<p>Your last task is to write a method for the <cite>Main</cite> class, <cite>getSellabilityReport</cite>,
+which prints out information about each melon that was harvested, and whether or not
+it is sellable.</p>
+<p>This function should take an array of melon instances as an argument, and return
+nothing. But, the function will print out who harvested each melon, what field
+it was harvested from, and whether it is sellable or not. In order to
+print this report, you’ll access several fields, and call the <cite>isSellable</cite>
+method on each melon instance.</p>
+<p>The output for this function should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Harvested</span> <span class="n">by</span> <span class="n">Sheila</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">2</span> <span class="p">(</span><span class="n">CAN</span> <span class="n">BE</span> <span class="n">SOLD</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Sheila</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">2</span> <span class="p">(</span><span class="n">NOT</span> <span class="n">SELLABLE</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Sheila</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">3</span> <span class="p">(</span><span class="n">NOT</span> <span class="n">SELLABLE</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Sheila</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">35</span> <span class="p">(</span><span class="n">CAN</span> <span class="n">BE</span> <span class="n">SOLD</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Michael</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">35</span> <span class="p">(</span><span class="n">CAN</span> <span class="n">BE</span> <span class="n">SOLD</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Michael</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">35</span> <span class="p">(</span><span class="n">NOT</span> <span class="n">SELLABLE</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Michael</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">4</span> <span class="p">(</span><span class="n">NOT</span> <span class="n">SELLABLE</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Michael</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">4</span> <span class="p">(</span><span class="n">CAN</span> <span class="n">BE</span> <span class="n">SOLD</span><span class="p">)</span>
+<span class="n">Harvested</span> <span class="n">by</span> <span class="n">Michael</span> <span class="kn">from</span> <span class="nn">Field</span> <span class="mi">3</span> <span class="p">(</span><span class="n">NOT</span> <span class="n">SELLABLE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Need help getting started? Check out the hint below.</p>
+<div class="admonition hint">
+<p class="admonition-title"><cite>getSellabilityReport()</cite></p>
+<details class="admonition-body"><summary></summary><div class="admonition-body docutils container">
+<p>In <cite>Main.java</cite>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+
+  <span class="c1">// main method here</span>
+
+<span class="hll">  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">getSellabilityReport</span><span class="p">(</span><span class="n">Melon</span><span class="o">[]</span> <span class="n">melons</span><span class="p">){</span>
+</span><span class="hll">    <span class="c1">// write the body of the method here!</span>
+</span><span class="hll">  <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section class="section" id="test-your-method">
+<h3>Test Your Method</h3>
+<p>Don’t forget to try running your <cite>getSellabilityReport</cite> method. You can call it from
+the <cite>main</cite> method on the <cite>Main</cite> class. Pass in the <cite>melons</cite> array that you created in
+the previous section. Double check that your output matches the desired output.</p>
+<p><strong>Congrats! You’re finished with OO Practice Melons in Java!</strong></p>
+</section>
+</section>
+</section>
+
+        </main>
+
+        <footer id="page-footer">
+            <p>&copy; 2022 Devmountain</p>
+        </footer>
+      </div>
+
+      <script src="_static/main.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+  </body>
+</html>
